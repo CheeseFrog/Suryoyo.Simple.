@@ -1,0 +1,7 @@
+/*<link rel="stylesheet" href="./css.css" type="text/css">*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&subset=latin-ext');
+
+* {-webkit-text-size-adjust:none;text-size-adjust:none;font-family: 'consolas', 'Roboto Mono', monospace, sans-serif !important;}
+
+sup {vertical-align:top!important;font-size: x-small!important;}

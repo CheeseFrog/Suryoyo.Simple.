@@ -1,6 +1,8 @@
-/*<link rel="stylesheet" href="./css.css" type="text/css"><script src="./js.js"></script>*/
+/*<meta name="viewport" content="user-scalable=yes, width=580, initial-scale=1, maximum-scale=2, minimum-scale=.5"/><link rel="stylesheet" href="./css.css" type="text/css"><script src="./js.js"></script>*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&subset=latin-ext');
+
+@media screen and (min-width: 700px) {html {padding:5vw 10vw!important;}}
 
 ::selection {background: yellow;}
 ::-moz-selection {background: yellow;}
@@ -9,7 +11,8 @@
 body,html,p {overflow-wrap:normal!important;white-space: pre!important;line-height:1.2!important;
 -webkit-text-size-adjust:none;text-size-adjust:none;}
 * {font-family: 'Consolas', 'Roboto Mono', monospace, monospace, sans-serif !important;}
-body,html {overflow:auto!important;}
+body,html {margin:0!important;}
+body {padding:6px 0 100px!important;margin:0 6px !important;}
 
 td {border:0!important;}
 .c40,sup {vertical-align:top!important;font-size:x-small!important;}
@@ -17,5 +20,5 @@ td {border:0!important;}
 [style*="background"] {cursor:pointer;user-select:none!important;-moz-user-select:none!important}
 .c21:hover,.c71:hover,.c82:hover,.c28:hover,
 [style*="background"]:hover {outline: 3px solid yellow;}
-
+a {color:red;}
 body[in="true"] {background:black!important;filter:invert(1);}

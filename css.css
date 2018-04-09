@@ -5,7 +5,7 @@
 ::selection {background: yellow;}
 ::-moz-selection {background: yellow;}
 
-* {overflow-wrap: normal!important;word-break: keep-all!important;overflow: hidden;white-space: pre!important;-webkit-text-size-adjust:none;text-size-adjust:none;font-family: 'consolas', 'Roboto Mono', monospace, sans-serif !important;}
+* {overflow-wrap: normal!important;word-break: keep-all!important;white-space: pre!important;-webkit-text-size-adjust:none;text-size-adjust:none;font-family: 'consolas', 'Roboto Mono', monospace, sans-serif !important;}
 body,html {overflow:auto;!important;}
 
 sup {vertical-align:top!important;font-size: x-small!important;}

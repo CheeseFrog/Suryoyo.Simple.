@@ -12,7 +12,7 @@ function start() {
 
 function str(a) {return a.replace(/\s/g, "");}
 function scr() {location.hash = "#" + str(this.innerText);}
-function top() {location.hash="#Index:"}
+function top() {location.hash="#INDEX:"}
 
 function find() {
 y=[];x=[52,66,79,13];for (var i=0;i<x.length;i++) y=y.concat([].slice.call(document.getElementsByClassName("c"+x[i])))

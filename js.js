@@ -1,18 +1,15 @@
-
-
+var y=[],x;
 window.addEventListener("load",start);
-var y=[],z=[],x
 function start() {
 x=document.getElementsByTagName("span");
 
 function find() {
 for (var i=0;i<x.length;i++) if (x[i].style.background && x[i].innerText) {
-	y.push(x[i]);
-	var id=document.getElementById(x[i].innerText); x[i].id=x[i].innerText;
-if (id) id.id="";x[i].onclick=scr;}}
-
-
-function scr() {location.hash = "#" + this.innerText;}
+	y.push(x[i]);var n=str(x[i].innerText)
+	var l=document.getElementById(n);if (l) l.id="_";
+	x[i].id=n;x[i].onclick=scr;}}
+function str(a) {return a.replace(/\s/g, "");}
+function scr() {location.hash = "#" + str(this.innerText);}
 
 find();
 }

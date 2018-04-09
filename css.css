@@ -1,7 +1,13 @@
-/*<link rel="stylesheet" href="./css.css" type="text/css">*/
+/*<link rel="stylesheet" href="./css.css" type="text/css"><script src="cordova.js"></script>*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&subset=latin-ext');
+
+::selection {background: yellow;}
+::-moz-selection {background: yellow;}
 
 * {-webkit-text-size-adjust:none;text-size-adjust:none;font-family: 'consolas', 'Roboto Mono', monospace, sans-serif !important;}
 
 sup {vertical-align:top!important;font-size: x-small!important;}
+
+[style*="background"] {user-select:none!important;-moz-user-select:none!important}
+[style*="background"]:hover {outline: 2px solid gray;}

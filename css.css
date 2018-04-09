@@ -9,10 +9,10 @@
 
 /*overflow: hidden;word-break: keep-all!important;*/
 body,html,p {overflow-wrap:normal!important;white-space: pre!important;line-height:1.2!important;
--webkit-text-size-adjust:none;text-size-adjust:none;}
+-webkit-text-size-adjust:90%;text-size-adjust:90%;}
 * {font-family: 'Consolas', 'Roboto Mono', monospace, monospace, sans-serif !important;}
 body,html {margin:0!important;}
-body {padding:6px 0 100px!important;margin:0 6px !important;}
+body {padding:0 0 100px!important;margin:5% !important;}
 
 td {border:0!important;}
 .c40,sup {vertical-align:top!important;font-size:x-small!important;}

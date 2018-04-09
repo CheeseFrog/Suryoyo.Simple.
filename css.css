@@ -6,15 +6,16 @@
 ::-moz-selection {background: yellow;}
 
 /*overflow: hidden;word-break: keep-all!important;*/
-body,html,p {overflow-wrap:normal!important;white-space: pre!important;line-height:1.165!important;
+body,html,p {overflow-wrap:normal!important;white-space: pre!important;line-height:1.2!important;
 -webkit-text-size-adjust:none;text-size-adjust:none;}
-* {font-family: 'Consolas', 'Roboto Mono', monospace, sans-serif !important;}
+* {font-family: 'Consolas', 'Roboto Mono', monospace, monospace, sans-serif !important;}
 body,html {overflow:auto!important;}
 
 td {border:0!important;}
 .c40,sup {vertical-align:top!important;font-size:x-small!important;}
+.c21,.c71,.c82,.c28,
+[style*="background"] {cursor:pointer;user-select:none!important;-moz-user-select:none!important}
+.c21:hover,.c71:hover,.c82:hover,.c28:hover,
+[style*="background"]:hover {outline: 3px solid yellow;}
 
-.c52,.c66,.c79,.c13,
-[style*="background"] {user-select:none!important;-moz-user-select:none!important}
-.c52:hover,.c66:hover,.c79:hover,.c13:hover,
-[style*="background"]:hover {outline: 2px solid gray;}
+body[in="true"] {background:black!important;filter:invert(1);}

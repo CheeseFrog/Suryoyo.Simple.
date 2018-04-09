@@ -1,6 +1,6 @@
 
 window.addEventListener("load",start);
-var y,x;
+var y,x,v=0;
 function start() {
 //includeHTML()
 //x=document.getElementsByTagName("span");
@@ -13,9 +13,12 @@ function start() {
 function str(a) {return a.replace(/\s/g, "");}
 function scr() {location.hash = "#" + str(this.innerText);}
 function top() {location.hash="#INDEX:"}
+function invert() {v=!v;document.body.setAttribute("in",v)}
 
 function find() {
-y=[];x=[52,66,79,13];for (var i=0;i<x.length;i++) y=y.concat([].slice.call(document.getElementsByClassName("c"+x[i])))
+document.getElementsByClassName("c28")[0].onclick=invert
+
+y=[];x=[71,82,21];for (var i=0;i<x.length;i++) y=y.concat([].slice.call(document.getElementsByClassName("c"+x[i])))
 
 for (var i=0;i<y.length;i++) {
 	var n=str(y[i].innerText)

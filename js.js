@@ -1,7 +1,7 @@
-var y=[],x;
+
 window.addEventListener("load",start);
 function start() {
-x=document.getElementsByTagName("span");
+var y=[],x=document.getElementsByTagName("span");
 
 function find() {
 for (var i=0;i<x.length;i++) if (x[i].style.background && x[i].innerText) {

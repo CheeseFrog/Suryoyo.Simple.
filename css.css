@@ -1,22 +1,35 @@
 /*<meta name="viewport" content="user-scalable=yes, width=560, initial-scale=1, maximum-scale=2, minimum-scale=.5"/><link rel="stylesheet" href="./css.css" type="text/css"><script src="./js.js"></script>*/
-/*[style*="background"] {cursor:pointer;user-select:none!important;}
-[style*="background"]:hover {outline: 3px solid yellow;}*/
+/*overflow: hidden;word-break: keep-all!important;*/
+/*@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&subset=latin-ext');
+@font-face {
+  font-family: 'Consolas';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Consolas'), url(https://fonts.gstatic.com/l/font?kit=X7nm4bA-A_-9jbjWaza9xMk&skey=3d1eb1871fcc58a1&v=v8) format('woff2');}
+@font-face {
+  font-family: 'Consolas';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Consolas Bold'), local('Consolas-Bold'), url(https://fonts.gstatic.com/l/font?kit=X7nh4bA-A_-9jbjWaz4G4dzmOg0&skey=ed6f0b47e729851b&v=v8) format('woff2');}*/
 
-/*@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&subset=latin-ext');*/
+
+@font-face {font-family:'serto'; src: url("./serto.woff") format("woff");unicode-range: U+0700-074F;}
+table:nth-of-type(2) * {font-family:'serto','consolas',monospace!important;}
 
 @media screen and (min-width: 700px) {html {padding:5vw 10vw!important;}}
-.
 ::selection {background: yellow;}
 ::-moz-selection {background: yellow;}
 
-/*overflow: hidden;word-break: keep-all!important;*/
-body,html,p {overflow-wrap:normal!important;white-space: pre!important;line-height:1.2!important;}
-* {font-family: 'Consolas', 'Roboto Mono', monospace, monospace, sans-serif !important;text-decoration-color:silver!important;}
-body,html {margin:0!important;-webkit-text-size-adjust:88%;text-size-adjust:88%;}
-body {zoom:1!important;margin:0 0 100px!important;padding:4%!important;max-width:92%!important}
 
-td {border:0!important;}
+body,html,p {overflow-wrap:normal!important;white-space: pre!important;}
+* {font-family:'xConsolas','Consolas','Roboto Mono',monospace,sans-serif!important;line-height:normal!important;text-decoration-color:hsl(0,0%,70%)!important;}
+body,html {margin:0!important;-webkit-text-size-adjust:88%;text-size-adjust:88%;}
+body {margin:0 0 100px!important;padding:4%!important;max-width:92%!important}
+
+td {border:0!important;padding:0!important}
 .c40,sup {vertical-align:top!important;font-size:x-small!important;}
 
 a {color:brown!important;}
 body[in="true"] {background:black!important;filter:invert(1);}
+
+

@@ -22,7 +22,7 @@ table:nth-of-type(2) * {font-family:'serto','consolas',monospace!important;}
 
 
 body,html,p {overflow-wrap:normal!important;white-space: pre!important;}
-* {font-family:'xConsolas','Consolas','Roboto Mono',monospace,sans-serif!important;line-height:normal!important;text-decoration-color:hsl(0,0%,70%)!important;}
+* {font-family:'Consolas','Roboto Mono',monospace,sans-serif!important;line-height:normal!important;text-decoration-color:hsl(0,0%,70%)!important;}
 body,html {margin:0!important;-webkit-text-size-adjust:88%;text-size-adjust:88%;}
 body {margin:0 0 100px!important;padding:4%!important;max-width:92%!important}
 

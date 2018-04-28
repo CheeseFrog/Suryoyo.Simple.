@@ -1,4 +1,4 @@
-/*<meta name="viewport" content="user-scalable=yes, width=560, initial-scale=1, maximum-scale=2, minimum-scale=.5"/><link rel="stylesheet" href="./css.css" type="text/css"><script src="./js.js"></script>*/
+/*<meta name="viewport" content="user-scalable=yes, width=680, maximum-scale=2, minimum-scale=.5"/><link rel="stylesheet" href="./css.css" type="text/css"><script src="./js.js"></script>*/
 /*overflow: hidden;word-break: keep-all!important;*/
 
 /*@font-face {font-family: 'Consola';font-weight: 400;
@@ -8,16 +8,22 @@ src: url(./consolab.woff2) format('woff2'), local('Consolas Bold'), local('Conso
 
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&subset=latin-ext');
 @font-face {font-family:'Serto'; src: url("./serto.woff") format("woff");unicode-range: U+0700-074F;}
-@media screen and (min-width: 700px) {html {padding:0 10vw!important;}}
+@media screen and (min-width: 800px) {html {padding:0 10vw!important;}}
 
 ::selection {background: yellow;}
 ::-moz-selection {background: yellow;}
+
+#up {transition: transform .2s ease,opacity .2s ease;font-size-adjust:.5;position:fixed;font-size:10vmin;border-radius:100%;padding:10px;width:10vmin;height:10vmin;line-height:.76!important;font-weight:700;background:black;bottom:3vmin;right:3vmin;text-align:center;color:white;opacity:.5;}
+[top='1'] #up {transform:translateY(100%);opacity:0!important;pointer-events:none;}
+
+.tit {cursor:pointer;user-select:none;}
+.tit:hover {box-shadow: 0 0 0 3px yellow;opacity:.99!important}
 
 table:nth-of-type(2) tr:nth-child(3n+1) * {font-family:'Serto',monospace,sans-serif!important;}
 
 body,html,p {overflow-wrap:normal!important;white-space: pre!important;}
 * {font-size-adjust:.45;font-family:'Space Mono','Consolas',monospace,sans-serif!important;line-height:normal!important;text-decoration-style: dotted!important;}
-body {width:450pt!important;max-width:none!important;margin:0 0 100pt!important;padding:4%!important;text-size-adjust:92%;}
+body {-webkit-tap-highlight-color:rgba(0,0,0,0);width:440pt!important;max-width:none!important;margin:0 0 100pt!important;padding:4%!important;text-size-adjust:92%;}
 /*body > * {margin: 0 0!important;-webkit-margin-before: 0!important;-webkit-margin-after: 0!important;}*/
 
 table {min-width:440pt!important;width:auto!important;}
@@ -26,6 +32,7 @@ td {border:0!important;padding:0!important;}
 /*.c24 {border-bottom:1px dotted currentcolor;}*/
 
 a {color:brown!important;}
-body[in="true"] {background:black!important;filter:invert(1);}
 
+body[in="true"] {background:black!important}
+body[in="true"] > * {filter:invert(1);}
 

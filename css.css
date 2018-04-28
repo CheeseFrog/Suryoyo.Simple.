@@ -1,4 +1,4 @@
-/*<meta name="viewport" content="user-scalable=yes, width=680, maximum-scale=2, minimum-scale=.5"/><link rel="stylesheet" href="./css.css" type="text/css"><script src="./js.js"></script>*/
+/*<meta name="viewport" content="user-scalable=yes, width=device-width, maximum-scale=1"/><link rel="stylesheet" href="./css.css" type="text/css"><script src="./js.js"></script><link rel="icon" href="./ico.gif"><title>Suryoyo.Simple.</title>*/
 /*overflow: hidden;word-break: keep-all!important;*/
 
 /*@font-face {font-family: 'Consola';font-weight: 400;
@@ -8,20 +8,21 @@ src: url(./consolab.woff2) format('woff2'), local('Consolas Bold'), local('Conso
 
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&subset=latin-ext');
 @font-face {font-family:'Serto'; src: url("./serto.woff") format("woff");unicode-range: U+0700-074F;}
-@media screen and (min-width: 800px) {html {padding:0 10vw!important;}}
+@media screen and (min-width: 900px) {html {padding:0 0 0 10vw!important;}}
 
 ::selection {background: yellow;}
 ::-moz-selection {background: yellow;}
 
-#up {transition: transform .2s ease,opacity .2s ease;font-size-adjust:.5;position:fixed;font-size:10vmin;border-radius:100%;padding:10px;width:10vmin;height:10vmin;line-height:.76!important;font-weight:700;background:black;bottom:3vmin;right:3vmin;text-align:center;color:white;opacity:.5;}
+#up {transition: transform .1s .2s ease,opacity .1s .2s ease;position:fixed;border-radius:100%;padding:15px;width:11.5vmin;height:11.5vmin;margin:4vmin;/*text-size-adjust:100%;font-size-adjust:.5;color:white;font-size:10vmin;line-height:.725!important;*/background:black;bottom:0;right:0;text-align:center;opacity:.5;}
+#up:after {content:"";font-size:0;line-height:0;border: 0px solid transparent;border-width: 0 5vmin 8.6667vmin 5vmin;border-bottom-color:white;}
 [top='1'] #up {transform:translateY(100%);opacity:0!important;pointer-events:none;}
 
-.tit {cursor:pointer;user-select:none;}
-.tit:hover {box-shadow: 0 0 0 3px yellow;opacity:.99!important}
+#up,.tit {cursor:pointer;user-select:none;-moz-user-select:none;}
+#up:active,.tit:hover {box-shadow: 0 0 0 3px yellow;opacity:.99!important}
 
 table:nth-of-type(2) tr:nth-child(3n+1) * {font-family:'Serto',monospace,sans-serif!important;}
 
-body,html,p {overflow-wrap:normal!important;white-space: pre!important;}
+body,html,p {padding:0;overflow-wrap:normal!important;white-space: pre!important;}
 * {font-size-adjust:.45;font-family:'Space Mono','Consolas',monospace,sans-serif!important;line-height:normal!important;text-decoration-style: dotted!important;}
 body {-webkit-tap-highlight-color:rgba(0,0,0,0);width:440pt!important;max-width:none!important;margin:0 0 100pt!important;padding:4%!important;text-size-adjust:92%;}
 /*body > * {margin: 0 0!important;-webkit-margin-before: 0!important;-webkit-margin-after: 0!important;}*/

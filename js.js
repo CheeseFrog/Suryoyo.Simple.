@@ -15,7 +15,7 @@ function start() {
 chktp();
 window.addEventListener("scroll",chktp)
 var up = document.createElement("div");
-up.id="up";up.innerText="";up.onclick=home;
+up.id="up";up.onclick=home;//up.innerText="△";
 document.body.appendChild(up)
 
 function getindex() {

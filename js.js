@@ -8,7 +8,7 @@ style.type = 'text/css';
 function str(a) {return a.replace(/\s/g, "");}
 function scr() {return location.hash="#"+str(""+this.innerText).substr(+this.dex);}
 function home() {window.scrollTo({top:0,behavior: "smooth"})}//location.hash="#[Suryoyo.Simple.]";
-function invert() {v=!v;document.body.setAttribute("in",v)}
+function invert() {v=!v;document.documentElement.setAttribute("in",+v)}
 function chktp() {document.body.setAttribute("top",+(window.pageYOffset<100))}
 
 function start() {

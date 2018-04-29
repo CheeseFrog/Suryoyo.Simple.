@@ -7,7 +7,7 @@ src: url(./consolab.woff2) format('woff2'), local('Consolas Bold'), local('Conso
 
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&subset=latin-ext');
 @font-face {font-family:'Serto'; src: url("./serto.woff") format("woff");unicode-range: U+0700-074F;}
-@media screen and (min-width: 900px) {html {padding:0 0 0 10vw!important;}}
+@media screen and (min-width: 900px) {html body {margin:10pt 0 100pt 10vw!important;}}
 
 ::selection {background: yellow;}
 ::-moz-selection {background: yellow;}
@@ -21,21 +21,20 @@ src: url(./consolab.woff2) format('woff2'), local('Consolas Bold'), local('Conso
 #up,.tit {cursor:pointer;user-select:none;-moz-user-select:none;}
 
 #up:active,.tit:hover,.tit:active {transition:none;box-shadow: 0 0 0 3px yellow;opacity:.99}
-:target {box-shadow:0 3px 0 yellow !important}
+:target {box-shadow:0 3px 0 yellow!important}
 
 table:nth-of-type(3) tr:nth-child(3n+1) * {font-family:'Serto',monospace,sans-serif!important;}
+table:nth-of-type(1) * {line-height:normal!important}
+body,html,p {padding:0;overflow-wrap:normal!important;white-space:pre!important;}
+* {font-family:'Space Mono','Consolas',monospace,sans-serif!important;line-height:1.75!important;text-decoration-style: dotted!important;}/*font-size-adjust:.2!important*/
+body {width:492pt!important;max-width:none!important;margin:10pt auto 100pt!important;padding:4%!important;background:rgba(0,0,0,0)!important;-webkit-tap-highlight-color:rgba(0,0,0,0);}/*box-shadow:0 1px 4px -2px black;*/
 
-body,html,p {padding:0;overflow-wrap:normal!important;white-space: pre!important;}
-* {font-size-adjust:.45;font-family:'Space Mono','Consolas',monospace,sans-serif!important;line-height:normal!important;text-decoration-style: dotted!important;}
-body {-webkit-tap-highlight-color:rgba(0,0,0,0);width:fit-content!important;max-width:none!important;margin:0 0 100pt!important;padding:4%!important;text-size-adjust:92%;}
-
-table {width:96%!important;max-width:485pt!important}
+table {width:100%!important;}/*max-width:485pt!important*/
 td {border:0!important;padding:0!important;}
 .c83,sup {vertical-align:top!important;font-size:x-small!important;}
 /*.c24 {border-bottom:1px dotted currentcolor;}*/
 
+html[in="1"] {background:black!important}
+html[in="1"] body > * {filter:invert(1);}
+
 a {color:brown!important;}
-
-body[in="true"] {background:black!important}
-body[in="true"] > * {filter:invert(1);}
-

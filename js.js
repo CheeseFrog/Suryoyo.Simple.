@@ -13,9 +13,9 @@ function chktp() {document.body.setAttribute("top",+(window.pageYOffset<100))}
 
 function start() {
 chktp();
-window.addEventListener("scroll",chktp)
+window.addEventListener("scroll",chktp, {passive: true})
 var up = document.createElement("div");
-up.id="up";up.onclick=home;//up.innerText="△";
+up.id="up";up.addEventListener("click",home,{passive: true});//up.innerText="△";
 document.body.appendChild(up)
 
 function getindex() {

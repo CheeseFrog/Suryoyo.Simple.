@@ -14,15 +14,16 @@ src: url(./consolab.woff2) format('woff2'), local('Consolas Bold'), local('Conso
 
 #up {transition:transform .15s,opacity .15s;position:fixed;border-radius:100%;padding:24px;width:8vmin;height:8vmin;margin:5vmin;background:black;bottom:0;right:0;text-align:center;opacity:.5;}
 #up:before {content:"";font-size:0;padding:4vmin;line-height:8vmin;background:white;position:relative;top:-8.33%;clip-path:polygon(50% 00%, 100% 86.6%, 0% 86.6%);}
-/*text-size-adjust:100%;font-size-adjust:.5;color:white;font-size:10vmin;line-height:.725!important;*/
+/*box-shadow:0 3px 8px -2px black;text-size-adjust:100%;font-size-adjust:.5;color:white;font-size:10vmin;line-height:.725!important;*/
 /*#up:after {content:"";font-size:0;line-height:0;border: 0px solid transparent;border-width: 0 5vmin 8.6667vmin 5vmin;border-bottom-color:white;}*/
 
 [top='1'] #up {transform:translateY(100%);opacity:0;pointer-events:none;}
 #up,.tit {cursor:pointer;user-select:none;-moz-user-select:none;}
 
-#up:active,.tit:hover {transition:none;box-shadow: 0 0 0 3px yellow;opacity:.99}
+#up:active,.tit:hover,.tit:active {transition:none;box-shadow: 0 0 0 3px yellow;opacity:.99}
+:target {box-shadow:0 3px 0 yellow}
 
-table:nth-of-type(2) tr:nth-child(3n+1) * {font-family:'Serto',monospace,sans-serif!important;}
+table:nth-of-type(3) tr:nth-child(3n+1) * {font-family:'Serto',monospace,sans-serif!important;}
 
 body,html,p {padding:0;overflow-wrap:normal!important;white-space: pre!important;}
 * {font-size-adjust:.45;font-family:'Space Mono','Consolas',monospace,sans-serif!important;line-height:normal!important;text-decoration-style: dotted!important;}

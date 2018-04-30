@@ -1,21 +1,14 @@
-/*<meta name="viewport" content="user-scalable=yes, width=device-width, maximum-scale=1"/><link rel="stylesheet" href="./css.css" type="text/css"><script src="./js.js"></script><link rel="icon" href="./ico.png"><meta name="theme-color" content="black"><title>Suryoyo.Simple.</title>*/
-
-/*@font-face {font-family: 'Consola';font-weight: 400;
-src: url(./consola.woff2) format('woff2'), local('Consolas');}
-@font-face {font-family: 'Consola';font-weight: 700;
-src: url(./consolab.woff2) format('woff2'), local('Consolas Bold'), local('Consolas-Bold');}*/
+/*<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width, maximum-scale=1"/><link rel="stylesheet" href="./css.css" type="text/css"><script src="./js.js"></script><link rel="icon" href="./ico.png"><meta name="theme-color" content="black"><title>[Suryoyo. Simple.]</title>*/
 
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&subset=latin-ext');
-@font-face {font-family:'Serto'; src: url("./serto.woff") format("woff");unicode-range: U+0700-074F;}
-@media screen and (min-width: 900px) {html body {margin:10pt 0 100pt 10vw!important;}}
+@font-face {font-family:'Serto';src: url("./serto.woff") format("woff");unicode-range: U+0700-074F;}
+@media screen and (min-width: 900px) {html body {margin:10pt 0 100pt 5vw!important;}}
 
 ::selection {background: yellow;}
 ::-moz-selection {background: yellow;}
 
 #up {transition:transform .15s,opacity .15s;position:fixed;border-radius:100%;padding:24px;width:8vmin;height:8vmin;margin:5vmin;background:black;bottom:0;right:0;text-align:center;opacity:.5;}
 #up:before {content:"";font-size:0;padding:4vmin;line-height:8vmin;background:white;position:relative;top:-8.33%;clip-path:polygon(50% 00%, 100% 86.6%, 0% 86.6%);}
-/*box-shadow:0 3px 8px -2px black;text-size-adjust:100%;font-size-adjust:.5;color:white;font-size:10vmin;line-height:.725!important;*/
-/*#up:after {content:"";font-size:0;line-height:0;border: 0px solid transparent;border-width: 0 5vmin 8.6667vmin 5vmin;border-bottom-color:white;}*/
 
 [top='1'] #up {transform:translateY(100%);opacity:0;pointer-events:none;}
 #up,.tit {cursor:pointer;user-select:none;-moz-user-select:none;}
@@ -26,15 +19,23 @@ src: url(./consolab.woff2) format('woff2'), local('Consolas Bold'), local('Conso
 table:nth-of-type(3) tr:nth-child(3n+1) * {font-family:'Serto',monospace,sans-serif!important;}
 table:nth-of-type(1) * {line-height:normal!important}
 body,html,p {padding:0;overflow-wrap:normal!important;white-space:pre!important;}
-* {font-family:'Space Mono','Consolas',monospace,sans-serif!important;line-height:1.75!important;text-decoration-style: dotted!important;}/*font-size-adjust:.2!important*/
-body {width:492pt!important;max-width:none!important;margin:10pt auto 100pt!important;padding:4%!important;background:rgba(0,0,0,0)!important;-webkit-tap-highlight-color:rgba(0,0,0,0);}/*box-shadow:0 1px 4px -2px black;*/
+* {font-family:'Space Mono','Consolas',monospace,sans-serif!important;line-height:1.75!important;text-decoration-style:dotted!important;}/*font-size-adjust:.2!important*/
+body {width:492pt!important;max-width:none!important;margin:10pt auto 100pt!important;padding:8%!important;background:rgba(0,0,0,0)!important;-webkit-tap-highlight-color:rgba(0,0,0,0);}/*box-shadow:0 1px 4px -2px black;*/
 
-table {width:100%!important;}/*max-width:485pt!important*/
+table {width:100%!important;}
 td {border:0!important;padding:0!important;}
-.c83,sup {vertical-align:top!important;font-size:x-small!important;}
-/*.c24 {border-bottom:1px dotted currentcolor;}*/
+.sup {vertical-align:top!important;font-size:x-small!important;}
+.ul {text-decoration:none!important;border-bottom:2px dotted currentcolor;}
 
-html[in="1"] {background:black!important}
+html[in="1"] {background:black;}
 html[in="1"] body > * {filter:invert(1);}
 
 a {color:brown!important;}
+
+
+/*@font-face {font-family: 'Consola';font-weight: 400;
+src: url(./consola.woff2) format('woff2'), local('Consolas');}
+@font-face {font-family: 'Consola';font-weight: 700;
+src: url(./consolab.woff2) format('woff2'), local('Consolas Bold'), local('Consolas-Bold');}*/
+/*box-shadow:0 3px 8px -2px black;text-size-adjust:100%;font-size-adjust:.5;color:white;font-size:10vmin;line-height:.725!important;*/
+/*#up:after {content:"";font-size:0;line-height:0;border: 0px solid transparent;border-width: 0 5vmin 8.6667vmin 5vmin;border-bottom-color:white;}*/

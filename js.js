@@ -1,18 +1,17 @@
 
 window.addEventListener("load",start);
-var y=[],x=[],v=0;
+var y=[],x=[],v;
 var style = document.createElement('style');
 style.type = 'text/css';
-
 
 function str(a) {return a.replace(/\s/g, "");}
 function scr() {return location.hash="#"+str(""+this.innerText).substr(+this.dex);}
 function home() {window.scrollTo({top:0,behavior: "smooth"})}//location.hash="#[Suryoyo.Simple.]";
-function invert() {v=!v;document.documentElement.setAttribute("in",+v)}
+function invert() {cookset('bw',v=!v);document.documentElement.setAttribute("in",+v)}
 function chktp() {document.body.setAttribute("top",+(window.pageYOffset<100))}
 
 function start() {
-chktp();
+v=!cookget('bw');invert();chktp();
 window.addEventListener("scroll",chktp, {passive: true})
 var up = document.createElement("div");
 up.id="up";up.addEventListener("click",home,{passive: true});//up.innerText="△";
@@ -42,14 +41,3 @@ classify("sup","vertical-align","super");
 dexify(classify("tit",0,0,"backgroundColor","padding"));
 document.getElementById("[Suryoyo.Simple.]").onclick=invert;
 }
-
-	//if (n) var last=document.getElementById(n);
-	//y[i].id=n;
-		//if (last) {last.id=""; }
-//includeHTML()
-//x=document.getElementsByTagName("span");
-// function findold() {
-// for (var i=0;i<x.length;i++) if (x[i].style.background && x[i].innerText) {
-// 	y.push(x[i]);var n=str(x[i].innerText)
-// 	var l=document.getElementById(n);if (l) l.id="_";
-// 	x[i].id=n;x[i].onclick=scr;}}

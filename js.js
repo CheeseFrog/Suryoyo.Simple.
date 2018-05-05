@@ -10,7 +10,6 @@ function invert() {cookset('bw',v=!v);document.documentElement.setAttribute("in"
 
 function start() {
 v=!cookget('bw');invert();
-document.getElementById("[Suryoyo.Simple.]").onclick=invert;
 
 var ss=document.styleSheets[1];
 var css=(ss.cssRules?ss.cssRules:ss.rules);
@@ -32,4 +31,5 @@ for (var i=0;i<y.length;i++) {
 classify("ul","text-decoration","underline");
 classify("sup","vertical-align","super");
 dexify(classify("tit",0,0,"backgroundColor","padding"));
+document.getElementById("[Suryoyo.Simple.]").onclick=invert;
 }

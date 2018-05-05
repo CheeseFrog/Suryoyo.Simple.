@@ -1,22 +1,16 @@
-
 window.addEventListener("load",start);
-var y=[],x=[],v;
+var y=[],v;
 var style = document.createElement('style');
 style.type = 'text/css';
 
 function str(a) {return a.replace(/\s/g, "");}
 function scr() {return location.hash="#"+str(""+this.innerText).substr(+this.dex);}
-function home() {window.scrollTo({top:0,behavior: "smooth"})}//location.hash="#[Suryoyo.Simple.]";
 function invert() {cookset('bw',v=!v);document.documentElement.setAttribute("in",+v)}
-function chktp() {document.body.setAttribute("top",+(window.pageYOffset<100))}
+
 
 function start() {
-v=!cookget('bw');invert();chktp();
-window.addEventListener("scroll",chktp, {passive: true})
-var up = document.createElement("div");
-up.id="up";up.addEventListener("click",home,{passive: true});//up.innerText="△";
-document.body.appendChild(up)
-
+v=!cookget('bw');invert();
+document.getElementById("[Suryoyo.Simple.]").onclick=invert;
 
 var ss=document.styleSheets[1];
 var css=(ss.cssRules?ss.cssRules:ss.rules);
@@ -35,9 +29,7 @@ for (var i=0;i<y.length;i++) {
 	y[i].dex=(n.charAt(0)==">")
 	y[i].onclick=(y[i].dex?scr:scr);}}
 
-
 classify("ul","text-decoration","underline");
 classify("sup","vertical-align","super");
 dexify(classify("tit",0,0,"backgroundColor","padding"));
-document.getElementById("[Suryoyo.Simple.]").onclick=invert;
 }

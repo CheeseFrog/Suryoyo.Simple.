@@ -1,4 +1,13 @@
-/*<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width, maximum-scale=1"/><link rel="stylesheet" href="./css.css" type="text/css"><script src="./js.js"></script><link rel="icon" href="./ico.png"><meta name="theme-color" content="black"><title>[Suryoyo. Simple.]</title>*/
+/*<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1"/>
+<link rel="stylesheet" href="./css.css" type="text/css">
+<link rel="icon" href="./ico.png">
+<script src="./JS-SmoothScrollToTopFAB.js"></script>
+<script src="./JS-CookGetSet.js"></script>
+<script src="./js.js"></script>
+<meta name="theme-color" content="black">
+<meta property="og:description" content="An introduction to Suryoyo / Turoyo / Surayt / Modern Western Syriac / Western Assyrian Neo-Aramaic">
+<meta property="og:image" content="https://cheesefrog.github.io/Suryoyo.Simple./ico.png">
+<title>[Suryoyo. Simple.]</title>*/
 
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&subset=latin-ext');
 @font-face {font-family:'Serto';src: url("./serto.woff") format("woff");unicode-range: U+0700-074F;}
@@ -7,16 +16,12 @@
 ::selection {background: yellow;}
 ::-moz-selection {background: yellow;}
 
-#up {transition:transform .15s,opacity .15s;position:fixed;border-radius:100%;padding:24px;width:8vmin;height:8vmin;margin:5vmin;background:black;bottom:0;right:0;text-align:center;opacity:.5;}
-#up:before {content:"";font-size:0;padding:4vmin;line-height:8vmin;background:white;position:relative;top:-8.33%;clip-path:polygon(50% 00%, 100% 86.6%, 0% 86.6%);}
+body:after {transition:opacity .3s .1s;z-index:999;content:"";position:fixed;top:0;left:0;width:100%;height:100%;background:white;}
+body[fabtop]:after {opacity:0;pointer-events:none;}
 
-body:after {transition:opacity .3s .1s;content:"";position:fixed;top:0;left:0;width:100%;height:100%;background:white;}
-body[top]:after {opacity:0;pointer-events:none;}
+.tit {cursor:pointer;user-select:none;-moz-user-select:none;}
 
-[top='1'] #up {transform:translateY(100%);opacity:0;pointer-events:none;}
-#up,.tit {cursor:pointer;user-select:none;-moz-user-select:none;}
-
-#up:active,.tit:hover,.tit:active {transition:none;box-shadow: 0 0 0 3px yellow;opacity:.99}
+#FABup:hover:active,.tit:hover,.tit:active {transition:none;box-shadow: 0 0 0 3px yellow;opacity:.99}
 :target {box-shadow:0 3px 0 yellow!important}
 
 table:nth-of-type(3) tr:nth-child(3n+1) * {font-family:'Serto',monospace,sans-serif!important;}
@@ -31,14 +36,11 @@ td {border:0!important;padding:0!important;}
 .ul {text-decoration:none!important;border-bottom:2px dotted currentcolor;}
 
 html[in="1"] {background:black;}
-html[in="1"] body > * {filter:invert(1);}
+html[in="1"] body > * {filter:invert(1)!important;}
 
 a {color:brown!important;}
-
 
 /*@font-face {font-family: 'Consola';font-weight: 400;
 src: url(./consola.woff2) format('woff2'), local('Consolas');}
 @font-face {font-family: 'Consola';font-weight: 700;
 src: url(./consolab.woff2) format('woff2'), local('Consolas Bold'), local('Consolas-Bold');}*/
-/*box-shadow:0 3px 8px -2px black;text-size-adjust:100%;font-size-adjust:.5;color:white;font-size:10vmin;line-height:.725!important;*/
-/*#up:after {content:"";font-size:0;line-height:0;border: 0px solid transparent;border-width: 0 5vmin 8.6667vmin 5vmin;border-bottom-color:white;}*/

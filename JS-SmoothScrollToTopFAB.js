@@ -17,12 +17,11 @@ function FABstart() {
 	css.textContent = `
 #FABup {
 	all: initial;
-	z-index: 999;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	z-index: 99;
 	cursor: pointer;
 	user-select: none;
 	-moz-user-select: none;
-	transition: transform .15s, opacity .15s;
+	-webkit-tap-highlight-color: transparent;
 	position: fixed;
 	border-radius: 100%;
 	padding: 24px;
@@ -33,6 +32,8 @@ function FABstart() {
 	bottom: 0;
 	right: 0;
 	text-align: center;
+	transition: transform .15s, opacity .15s;
+	transform: translateY(0%);
 	opacity: .5;
 }
 #FABup:before {
@@ -43,18 +44,18 @@ function FABstart() {
 	background: white;
 	position: relative;
 	top: -8.33%;
-	clip-path: polygon(50% 00%, 100% 86.6%, 0% 86.6%);
+	clip-path: polygon(50% 0%, 100% 86.6%, 0% 86.6%);
 }
-[FABtop="1"]>#FABup {
+[FABtop="1"] #FABup {
 	transform: translateY(100%);
 	opacity: 0;
 	pointer-events: none;
 }
-#FABup:active {
+#FABup:hover:active {
 	transition: none;
 	opacity: .99
 }
 `
-	document.head.appendChild( css );
+	document.head.appendChild(css);
 	document.body.appendChild(up)
 }

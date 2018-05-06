@@ -33,7 +33,6 @@ function FABstart() {
 	right: 0;
 	text-align: center;
 	transition: transform .15s, opacity .15s;
-	transform: translateY(0%);
 	opacity: .5;
 }
 #FABup:before {

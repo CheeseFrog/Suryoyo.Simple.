@@ -40,6 +40,8 @@ td {border:0!important;padding:0!important;}
 .sup {vertical-align:top!important;font-size:x-small!important;}
 .ul {text-decoration:none!important;border-bottom:2px dotted currentcolor;}
 
+.ul:not(.eg) {border-bottom:0;color:rgb(180,0,100);}
+
 html[in="1"] {background:black;}
 html[in="1"] body > * {filter:invert(1)!important;}
 

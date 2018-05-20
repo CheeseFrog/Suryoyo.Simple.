@@ -1,4 +1,3 @@
-window.addEventListener("load",start);
 var y=[],v;
 var style = document.createElement('style');
 style.type = 'text/css';
@@ -7,7 +6,7 @@ function str(a) {return a.replace(/\s/g, "");}
 function scr() {return location.hash="#"+str(""+this.innerText).substr(+this.dex);}
 function invert() {cookset('bw',v=!v);document.documentElement.setAttribute("in",+v)}
 
-
+window.addEventListener("load",start);
 function start() {
 v=!cookget('bw');invert();
 
@@ -28,6 +27,7 @@ for (var i=0;i<y.length;i++) {
 	y[i].dex=(n.charAt(0)==">")
 	y[i].onclick=(y[i].dex?scr:scr);}}
 
+classify("eg","color","rgb(102, 102, 102)");
 classify("ul","text-decoration","underline");
 classify("sup","vertical-align","super");
 dexify(classify("tit",0,0,"backgroundColor","padding"));

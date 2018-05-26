@@ -1,5 +1,4 @@
 /*<html><head>
-<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <meta name="viewport" content="user-scalable=yes, width=device-width, maximum-scale=1"/>
 <link rel="stylesheet" href="./css.css" type="text/css">
 <link rel="icon" href="./ico.png">
@@ -40,12 +39,12 @@ td {border:0!important;padding:0!important;}
 .sup {vertical-align:top!important;font-size:x-small!important;}
 .ul {text-decoration:none!important;border-bottom:2px dotted currentcolor;}
 
-.ul:not(.eg) {border-bottom:0;color:rgb(180,0,100);}
+.ul:not(.eg) {border-bottom:0;color:rgb(180,0,100)!important;}
 
 html[in="1"] {background:black;}
 html[in="1"] body > * {filter:invert(1)!important;}
 
-a {color:brown!important;}
+.red, a {color:hsl(10,95%,45%)!important;}
 
 /*@font-face {font-family: 'Consola';font-weight: 400;
 src: url(./consola.woff2) format('woff2'), local('Consolas');}

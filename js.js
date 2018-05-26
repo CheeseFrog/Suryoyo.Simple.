@@ -27,6 +27,7 @@ for (var i=0;i<y.length;i++) {
 	y[i].dex=(n.charAt(0)==">")
 	y[i].onclick=(y[i].dex?scr:scr);}}
 
+classify("red","color","rgb(255, 0, 0)");
 classify("eg","color","rgb(102, 102, 102)");
 classify("ul","text-decoration","underline");
 classify("sup","vertical-align","super");

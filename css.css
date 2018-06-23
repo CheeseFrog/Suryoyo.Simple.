@@ -29,7 +29,7 @@ body[fabtop]:after {opacity:0;pointer-events:none;}
 :target {box-shadow:0 3px 0 yellow!important}
 
 table:nth-of-type(3) tr:nth-child(3n+1) * {font-family:'Serto',monospace,sans-serif!important;}
-table:nth-of-type(1) * {line-height:normal!important}
+table:nth-of-type(1) * {line-height:normal!important} table:nth-of-type(1) p {margin-top:-1px;}
 body,html,p {padding:0;overflow-wrap:normal!important;white-space:pre!important;}
 * {font-family:'Space Mono','Consolas',monospace,sans-serif!important;line-height:1.75!important;text-decoration-style:dotted!important;}/*font-size-adjust:.2!important*/
 body {width:492pt!important;max-width:none!important;margin:10pt auto 100pt!important;padding:8%!important;background:rgba(0,0,0,0)!important;-webkit-tap-highlight-color:rgba(0,0,0,0);}/*box-shadow:0 1px 4px -2px black;*/
@@ -44,7 +44,7 @@ td {border:0!important;padding:0!important;}
 html[in="1"] {background:black;}
 html[in="1"] body > * {filter:invert(1)!important;}
 
-.red, a {color:hsl(10,95%,45%)!important;}
+.red, a {color:hsl(10,95%,42%)!important;}
 
 /*@font-face {font-family: 'Consola';font-weight: 400;
 src: url(./consola.woff2) format('woff2'), local('Consolas');}

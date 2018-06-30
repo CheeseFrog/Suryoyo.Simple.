@@ -36,7 +36,8 @@ body {width:492pt!important;max-width:none!important;margin:10pt auto 100pt!impo
 
 table {width:100%!important;}
 td {border:0!important;padding:0!important;}
-.sup {vertical-align:top!important;font-size:x-small!important;}
+.sub {vertical-align:0!important;margin-left:4px;font-size:60%!important;color:hsl(0,0%,70%);}
+.sup {vertical-align:top!important;font-size:60%!important;}
 .ul {text-decoration:none!important;border-bottom:2px dotted currentcolor;}
 
 .ul:not(.eg) {border-bottom:0;color:rgb(180,0,100)!important;}

@@ -7,7 +7,7 @@ function FABstart() {
 	up.id = "FABup";
 
 	function home() {window.scrollTo({top: 0, behavior: "smooth"})}
-	up.addEventListener("click", home, {passive: true});
+	up.addEventListener("click", home, {passive: false});
 	
 	function chktp() {document.body.setAttribute("FABtop", +(window.pageYOffset < 100))}
 	window.addEventListener("scroll", chktp, {passive: true})
@@ -33,6 +33,7 @@ function FABstart() {
 	right: 0;
 	text-align: center;
 	transition: transform .15s, opacity .15s;
+	transform: translateY(0px);
 	opacity: .5;
 }
 #FABup:before {

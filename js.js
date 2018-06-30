@@ -31,6 +31,7 @@ classify("red","color","rgb(255, 0, 0)");
 classify("eg","color","rgb(102, 102, 102)");
 classify("ul","text-decoration","underline");
 classify("sup","vertical-align","super");
+classify("sub","vertical-align","sub");
 dexify(classify("tit",0,0,"backgroundColor","padding"));
 document.getElementById("[Suryoyo.Simple.]").onclick=invert;
 }

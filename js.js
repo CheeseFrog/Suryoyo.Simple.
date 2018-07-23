@@ -8,6 +8,7 @@ function invert() {cookset('bw',v=!v);document.documentElement.setAttribute("in"
 
 window.addEventListener("load",start);
 function start() {
+var go=window.location.href.split("#")[1];if (go) window.location.href="#"+go;
 v=!cookget('bw');invert();
 
 var ss=document.styleSheets[1];

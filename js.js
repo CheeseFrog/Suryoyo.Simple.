@@ -8,7 +8,6 @@ function invert() {cookset('bw',v=!v);document.documentElement.setAttribute("in"
 
 window.addEventListener("load",start);
 function start() {
-if (location.hash) document.getElementById(location.hash.split("#")[1]).scrollIntoView({behavior:'smooth'});
 v=!cookget('bw');invert();
 
 var ss=document.styleSheets[1];
@@ -35,4 +34,5 @@ classify("sup","vertical-align","super");
 classify("sub","vertical-align","sub");
 dexify(classify("tit",0,0,"backgroundColor","padding"));
 document.getElementById("[Suryoyo.Simple.]").onclick=invert;
+if (location.hash) document.getElementById(location.hash.split("#")[1]).scrollIntoView({behavior:'smooth'});
 }

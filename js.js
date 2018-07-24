@@ -8,7 +8,7 @@ function invert() {cookset('bw',v=!v);document.documentElement.setAttribute("in"
 
 window.addEventListener("load",start);
 function start() {
-var go=window.location.href.split("#")[1];if (go) window.location.href="#"+go;
+if (location.hash) document.getElementById(location.hash.split("#")[1]).scrollIntoView({behavior:'smooth'});
 v=!cookget('bw');invert();
 
 var ss=document.styleSheets[1];

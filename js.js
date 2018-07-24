@@ -34,5 +34,5 @@ classify("sup","vertical-align","super");
 classify("sub","vertical-align","sub");
 dexify(classify("tit",0,0,"backgroundColor","padding"));
 document.getElementById("[Suryoyo.Simple.]").onclick=invert;
-if (location.hash) document.getElementById(location.hash.split("#")[1]).scrollIntoView({behavior:'smooth'});
+if (location.hash) setTimeout(function(){document.getElementById(location.hash.split("#")[1]).scrollIntoView();},1);
 }

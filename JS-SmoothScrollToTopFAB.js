@@ -1,10 +1,10 @@
-// JS-SmoothScrollToTopFAB
+// Add this : <script src="./JS-SmoothScrollToTopFAB.js"></script>
 
-if (document.readyState === "complete") FABstart(); else window.addEventListener("load", FABstart);
+if (document.readyState === "complete") SFAB(); else window.addEventListener("load", SFAB);
 
-function FABstart() {
+function SFAB() {
 	var up = document.createElement("div");
-	up.id = "FABup";
+	up.className = "FABdo";	up.id = "FABup";
 
 	function home() {window.scrollTo({top: 0, behavior: "smooth"})}
 	up.addEventListener("click", home, {passive: false});
@@ -15,7 +15,7 @@ function FABstart() {
 
 	const css = document.createElement("style");
 	css.textContent = `
-#FABup {
+.FABdo {
 	all: initial;
 	z-index: 99;
 	cursor: pointer;
@@ -24,28 +24,33 @@ function FABstart() {
 	-webkit-tap-highlight-color: transparent;
 	position: fixed;
 	border-radius: 100%;
-	padding: 24px;
+	padding: 2.5vh;
 	width: 8vmin;
 	height: 8vmin;
 	margin: 5vmin;
 	background: black;
-	bottom: 0;
-	right: 0;
 	text-align: center;
 	transition: transform .15s, opacity .15s;
+}
+
+.FABdo:before {
+	content: "";
+	font-size: 0;
+	display: block;
+	height: 8vmin;
+	background: white;
+	top:-6.7%;
+	position: relative;
+	clip-path: polygon(50% 0%, 100% 86.6%, 0% 86.6%);
+}
+
+#FABup {
+	bottom: 0;
+	right: 0;
 	transform: translateY(0px);
 	opacity: .5;
 }
-#FABup:before {
-	content: "";
-	font-size: 0;
-	padding: 4vmin;
-	line-height: 8vmin;
-	background: white;
-	position: relative;
-	top: -8.33%;
-	clip-path: polygon(50% 0%, 100% 86.6%, 0% 86.6%);
-}
+
 [FABtop="1"] #FABup {
 	transform: translateY(100%);
 	opacity: 0;

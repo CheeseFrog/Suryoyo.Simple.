@@ -9,19 +9,22 @@ function HFAB() {
 	var R = document.createElement("div");
 	R.className = "FABdo"; R.id = "RFAB";
 	R.setAttribute("X",0);
+	var oldX = 0;
 
 	function wheel(e) {
-		if (!e.deltaY)
-	     if (e.deltaX>120 && (L.getAttribute("X")==0)) {
-	     	L.setAttribute("X",1); R.setAttribute("X",0);
-	     	setTimeout(function(){L.setAttribute("X",0);}, 700);
-	     	window.history.back()
-	     }
-	else if (e.deltaX<-120 && (R.getAttribute("X")==0)) {
+		if (!e.deltaY && oldX==e.clientX && window.history.length>1)
+		    if (e.deltaX>122 && (L.getAttribute("X")==0)) {
 			R.setAttribute("X",1); L.setAttribute("X",0);
 			setTimeout(function(){R.setAttribute("X",0);}, 700);
-			window.history.forward()
-		}
+			window.history.forward();e.preventDefault();
+		    }
+		else
+			if (e.deltaX<-122 && (R.getAttribute("X")==0)) {
+			L.setAttribute("X",1); R.setAttribute("X",0);
+			setTimeout(function(){L.setAttribute("X",0);}, 700);
+			window.history.back();e.preventDefault();
+			}
+		oldX=e.clientX
 	}
 
 	window.addEventListener('wheel', wheel, {passive: false});

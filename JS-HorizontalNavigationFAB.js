@@ -58,7 +58,7 @@ function HFAB() {
 }
 
 #LFAB, #RFAB {
-	top: 38vmin;
+	top: 38vh;
 	opacity: 0;
 	pointer-events: none;
 }

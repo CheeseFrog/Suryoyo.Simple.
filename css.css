@@ -21,7 +21,7 @@
 ::-moz-selection {background: yellow;}
 
 body:after {transition:opacity .3s .1s;z-index:999;content:"";position:fixed;top:0;left:0;width:100%;height:100%;background:white;}
-body[fabtop]:after {opacity:0;pointer-events:none;}
+body[load]:after {opacity:0;pointer-events:none;}
 
 .tit {cursor:pointer;user-select:none;-moz-user-select:none;}
 

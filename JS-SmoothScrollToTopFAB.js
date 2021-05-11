@@ -9,7 +9,7 @@ function SFAB() {
 	function home() {window.scrollTo({top: 0, behavior: "smooth"})}
 	up.addEventListener("click", home, {passive: false});
 	
-	function chktp() {document.body.setAttribute("FABtop", +(window.pageYOffset < 100))}
+	function chktp() {up.setAttribute("FABtop", +(window.pageYOffset < 100))}
 	window.addEventListener("scroll", chktp, {passive: true})
 	chktp();
 
@@ -51,7 +51,7 @@ function SFAB() {
 	opacity: .5;
 }
 
-[FABtop="1"] #FABup {
+#FABup[FABtop="1"] {
 	transform: translateY(100%);
 	opacity: 0;
 	pointer-events: none;

@@ -9,6 +9,7 @@ function invert() {cookset('bw',v=!v);document.documentElement.setAttribute("in"
 window.addEventListener("load",start);
 function start() {
 v=!cookget('bw');invert();
+document.body.setAttribute("load",1)
 
 var ss=document.styleSheets[1];
 var css=(ss.cssRules?ss.cssRules:ss.rules);

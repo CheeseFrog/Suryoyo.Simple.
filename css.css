@@ -17,16 +17,17 @@
 @font-face {font-family:'Serto';src: url("./serto.woff") format("woff");unicode-range: U+0700-074F;}
 @media screen and (min-width: 900px) {html body {margin:10pt 0 100pt 5vw!important;}}
 
-::selection {background: yellow;}
-::-moz-selection {background: yellow;}
+:root {--highlight: yellow;}
+::selection {background: var(--highlight);}
+::-moz-selection {background: var(--highlight);}
 
 body:after {transition:opacity .3s .1s;z-index:999;content:"";position:fixed;top:0;left:0;width:100%;height:100%;background:white;}
 body[load]:after {opacity:0;pointer-events:none;}
 
 .tit {cursor:pointer;user-select:none;-moz-user-select:none;}
 
-#FABup:hover:active,.tit:hover,.tit:active {transition:none;box-shadow: 0 0 0 3px yellow;opacity:.99}
-:target {box-shadow:0 3px 0 yellow!important}
+.tit:hover,.tit:active {transition:none;box-shadow: 0 0 0 3px var(--highlight);opacity:.99}
+:target {box-shadow:0 3px 0 var(--highlight)!important}
 
 table:nth-of-type(3) tr:nth-child(3n+1) * {font-family:'Serto',monospace,sans-serif!important;}
 table:nth-of-type(1) * {line-height:normal!important} table:nth-of-type(1) p {margin-top:-1px;}

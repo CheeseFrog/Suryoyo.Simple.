@@ -14,6 +14,57 @@ function SFAB() {
 
 	const css = document.createElement("style");
 	css.textContent = `
+	.FABdo {
+		all: initial;
+		--FABsize: calc(8vh + 4px);
+		z-index: 9999;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		-moz-user-select: none;
+		user-select: none;
+		position: fixed;
+		border-radius: 100%;
+		padding: calc(var(--FABsize) / 3);
+		width: var(--FABsize);
+		height: var(--FABsize);
+		background: hsl(0,0%,33%);
+		text-align: center;
+		transition: transform .15s, opacity .15s;
+		border: calc(var(--FABsize) / 2) solid transparent;
+		background-clip: padding-box;
+		opacity:.66;
+	}
+
+	.FABdo:before {
+		content: "";
+		font-size: 0;
+		display: block;
+		height: var(--FABsize);
+		background: white;
+		top:-6.7%;
+		position: relative;
+		clip-path: polygon(50% 0%, 100% 86.6%, 0% 86.6%);
+	}
+
+	.FABdo[IO]:active:hover {
+		box-shadow: inset 0 0 0 0.5px hsl(0,0%,33%), inset 0 0 0 4px var(--highlight, highlight);
+		opacity: .99;
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+	.FABdo:not([IO="0"]):hover {
+		opacity: .825;
+	}
+	.FABdo[IO="0"]:hover {
+		transition: transform .15s 1.5s, opacity .15s;
+	}
+	}
+
+	.FABdo[D="1"] {
+		opacity: 0.25 !important;
+	}
+
+/**/
 	#FABup {
 		bottom: 0;
 		right: 0;

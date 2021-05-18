@@ -16,6 +16,7 @@ function FABigation() {
 	function setIO(Fon,Foff,IO) {
 		if (Fon) {
 			(Fon).setAttribute("IO",IO);
+			if ((Fon==R || Fon==L)) (Fon).setAttribute("D",window.history.length);
 			clearTimeout(Fon.T);
 			Fon.T = setTimeout(function(){(Fon).setAttribute("IO",0);}, 1500*IO);
 		}
@@ -37,16 +38,12 @@ function FABigation() {
 	}
 
 	function wheel(e) {
-		if (!e.deltaY && oldCX==e.clientX && window.history.length>1) {
-		    if (e.deltaX>Z && (R.getAttribute("IO")!=1)) {
-		    	setIO(R,L,1); forward();
-		    }
+		if (!e.deltaY && oldCX==e.clientX) {
+		    if (e.deltaX>Z && (R.getAttribute("IO")!=1)) setIO(R,L,1);
 				else
 			if (e.deltaX>Z/2 && (R.getAttribute("IO")!=1)) setIO(R,L,0.5)
 				else
-			if (e.deltaX<-Z && (L.getAttribute("IO")!=1)) {
-				setIO(L,R,1); back();
-			}
+			if (e.deltaX<-Z && (L.getAttribute("IO")!=1)) setIO(L,R,1)
 				else
 			if (e.deltaX<-Z/2 && (L.getAttribute("IO")!=1)) setIO(L,R,0.5)
 		}
@@ -122,7 +119,7 @@ function FABigation() {
 		padding: calc(var(--FABsize) / 3);
 		width: var(--FABsize);
 		height: var(--FABsize);
-		background: hsl(0,0%,25%);
+		background: hsl(0,0%,33%);
 		text-align: center;
 		transition: transform .15s, opacity .15s;
 		border: calc(var(--FABsize) / 2) solid transparent;
@@ -141,21 +138,22 @@ function FABigation() {
 		clip-path: polygon(50% 0%, 100% 86.6%, 0% 86.6%);
 	}
 
-	.FABdo:hover:active {
-		box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.5), inset 0 0 0 4px var(--highlight, highlight);
+	.FABdo[IO]:active:hover {
+		box-shadow: inset 0 0 0 0.5px hsl(0,0%,33%), inset 0 0 0 4px var(--highlight, highlight);
 		opacity: .99;
 	}
 
-	.FABdo[IO="0"]:not(:hover):not(:active) {
-		pointer-events: none;
-		transition: all 0 none;
-		opacity: 0;
-	}
-
 	@media (hover: hover) and (pointer: fine) {
-	.FABdo:hover {
+	.FABdo:not([IO="0"]):hover {
 		opacity: .825;
 	}
+	.FABdo[IO="0"]:hover {
+		transition: transform .15s 1.5s, opacity .15s;
+	}
+	}
+
+	.FABdo[D="1"] {
+		opacity: 0.25 !important;
 	}
 
 /**/
@@ -166,7 +164,7 @@ function FABigation() {
 	}
 
 	#LFAB {
-		left:0;
+		left: 0;
 		transform: translate(0,-50%) rotate(-90deg);
 	}
 
@@ -174,7 +172,7 @@ function FABigation() {
 		transform: translate(-50%,-50%) rotate(-90deg);
 	}
 
-	#LFAB[IO="0"]:not(:hover):not(:active) {
+	#LFAB[IO="0"]:not(:active) {
 		transform: translate(-100%,-50%) rotate(-90deg);
 	}
 
@@ -187,7 +185,7 @@ function FABigation() {
 		transform: translate(50%,-50%) rotate(90deg);
 	}
 
-	#RFAB[IO="0"]:not(:hover):not(:active) {
+	#RFAB[IO="0"]:not(:active) {
 		transform: translate(100%,-50%) rotate(90deg);
 	}
 
@@ -207,7 +205,7 @@ function FABigation() {
 		transform: translate(-50%, -50%);
 	}
 
-	#TFAB[IO="0"]:not(:hover):not(:active) {
+	#TFAB[IO="0"]:not(:active) {
 		transform: translate(-50%, -100%);
 	}
 
@@ -220,7 +218,7 @@ function FABigation() {
 		transform: translate(0, 50%);
 	}
 
-	#BFAB[IO="0"]:not(:hover):not(:active) {
+	#BFAB[IO="0"]:not(:active) {
 		transform: translate(0, 100%);
 	}
 	`

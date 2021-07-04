@@ -73,6 +73,7 @@ function FABigation() { window.FABigation = function() {}
 
 	function sticky() {isScroll(); var IO = +!atTop(100); if (FABkey["Sticky"] && IO!=B.getAttribute("IO")) B.setAttribute("IO", IO)}
 	window.addEventListener("scroll", sticky, {passive: true})
+	sticky();
 
 	function isScroll() {clearTimeout(isScroll.on); isScroll.on=setTimeout(function(){isScroll.on=0},10)}
 

@@ -71,12 +71,12 @@ function FABigation() { window.FABigation = function() {}
 	function atTop(y) {return +(window.pageYOffset < (y||3))}
 	function atEnd() {return (window.innerHeight + window.scrollY + 3 >= ([document.body.scrollHeight, document.body.offsetHeight, document.scrollingElement.scrollHeight].sort(function(a,b){return b-a}))[0]);}
 
-	function sticky() {var IO = +!atTop(100); if (FABkey["Sticky"] && IO!=B.getAttribute("IO")) B.setAttribute("IO", IO)}
+	function sticky() {isScroll(); var IO = +!atTop(100); if (FABkey["Sticky"] && IO!=B.getAttribute("IO")) B.setAttribute("IO", IO)}
 	window.addEventListener("scroll", sticky, {passive: true})
 
 	function isScroll() {clearTimeout(isScroll.on); isScroll.on=setTimeout(function(){isScroll.on=0},10)}
 
-	function wheel(e) { isScroll();
+	function wheel(e) {
 		var Z = 210 - FABkey["TPS"] || 91; 
 		if (!e.deltaY && wheel.oldCX==e.clientX) {
 		    if (e.deltaX>Z) setIO(R,L,1);
@@ -105,7 +105,7 @@ function FABigation() { window.FABigation = function() {}
 	window.addEventListener('wheel', wheel, {passive: true});
 
 	function TArO(N,n) {TAr[N] = TAr[0][n] - TAr[TAr.length-1][n]}
-	function Tmove(e) { isScroll();
+	function Tmove(e) {
 		var Z = 210 - FABkey["TSS"] || 91; 
 		TAr.push([e.changedTouches[0].pageX,e.changedTouches[0].pageY,e.changedTouches[0].clientX,e.changedTouches[0].clientY])
 		TAr.multi = (TAr.multi?true:(e.changedTouches[1]!=undefined))
